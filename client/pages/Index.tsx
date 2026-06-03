@@ -91,7 +91,9 @@ The Hiring Team`,
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-500 via-blue-600 to-blue-900 py-8 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-500 via-blue-600 to-blue-900 relative overflow-hidden">
+      <div className="absolute bottom-0 left-0 right-0 h-64 bg-white transform -skew-y-2"></div>
+      <div className="relative py-8 px-4 z-10">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
@@ -366,6 +368,7 @@ The Hiring Team`,
         <div className="mt-12 text-center text-xs text-white/50">
           <p>made with ❤️ by Zeno Cyber</p>
         </div>
+      </div>
       </div>
     </div>
   );
