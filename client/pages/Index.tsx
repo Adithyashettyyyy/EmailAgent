@@ -92,31 +92,31 @@ The Hiring Team`,
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-500 via-blue-600 to-blue-900 relative overflow-hidden">
-      <div className="absolute bottom-0 left-0 right-0 h-64 bg-white transform -skew-y-2"></div>
-      <div className="relative py-8 px-4 z-10">
+      <div className="absolute bottom-0 left-0 right-0 h-48 md:h-64 bg-white transform -skew-y-2"></div>
+      <div className="relative py-6 md:py-8 px-4 md:px-6 z-10">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-6 md:mb-8">
           <div className="text-xs text-white font-mono mb-2 opacity-90">
             v0.1 • python • repos • 100% local
           </div>
-          <h1 className="text-4xl font-bold text-white mb-1">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-1">
             Resume <span className="text-white">Email</span> Agent
           </h1>
-          <p className="text-sm text-white opacity-90">
+          <p className="text-xs md:text-sm text-white opacity-90">
             python + repos + email - fully independent
           </p>
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
           {/* 1. Upload Resume */}
-          <div className="border border-white/20 rounded-lg p-6 bg-white/10 backdrop-blur-sm">
+          <div className="border border-white/20 rounded-lg p-4 md:p-6 bg-white/10 backdrop-blur-sm">
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-6 h-6 rounded-full border border-white/30 flex items-center justify-center text-xs text-white">
+              <span className="w-6 h-6 rounded-full border border-white/30 flex items-center justify-center text-xs text-white flex-shrink-0">
                 1
               </span>
-              <h2 className="text-lg font-semibold text-white uppercase tracking-wide text-sm">
+              <h2 className="text-base md:text-lg font-semibold text-white uppercase tracking-wide">
                 Upload Resume
               </h2>
             </div>
@@ -125,15 +125,15 @@ The Hiring Team`,
               onDragOver={handleDragOver}
               onDrop={(e) => handleDrop(e, "resume")}
               onClick={() => resumeInputRef.current?.click()}
-              className="border-2 border-dashed border-white/20 rounded-lg p-8 text-center cursor-pointer hover:border-white/40 transition-colors bg-white/5"
+              className="border-2 border-dashed border-white/20 rounded-lg p-6 md:p-8 text-center cursor-pointer hover:border-white/40 transition-colors bg-white/5"
             >
-              <FileIcon className="w-8 h-8 text-white/50 mx-auto mb-3" />
-              <p className="text-white/80 mb-1">
+              <FileIcon className="w-6 md:w-8 h-6 md:h-8 text-white/50 mx-auto mb-2 md:mb-3" />
+              <p className="text-white/80 mb-1 text-sm md:text-base">
                 Drop PDF or DOCX here
               </p>
               <p className="text-xs text-white/60">click to browse - pdf, docx supported</p>
               {formData.resume && (
-                <p className="mt-3 text-white text-sm font-semibold">{formData.resume.name}</p>
+                <p className="mt-2 md:mt-3 text-white text-xs md:text-sm font-semibold truncate">{formData.resume.name}</p>
               )}
               <input
                 ref={resumeInputRef}
@@ -146,17 +146,17 @@ The Hiring Team`,
           </div>
 
           {/* 2. Attachments */}
-          <div className="border border-white/20 rounded-lg p-6 bg-white/10 backdrop-blur-sm">
+          <div className="border border-white/20 rounded-lg p-4 md:p-6 bg-white/10 backdrop-blur-sm">
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-6 h-6 rounded-full border border-white/30 flex items-center justify-center text-xs text-white">
+              <span className="w-6 h-6 rounded-full border border-white/30 flex items-center justify-center text-xs text-white flex-shrink-0">
                 2
               </span>
-              <h2 className="text-lg font-semibold text-white uppercase tracking-wide text-sm">
+              <h2 className="text-base md:text-lg font-semibold text-white uppercase tracking-wide">
                 Attachments
               </h2>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
               {/* JD File */}
               <div className="space-y-2">
                 <label className="text-xs text-white/70 uppercase tracking-wide">
@@ -164,13 +164,13 @@ The Hiring Team`,
                 </label>
                 <div
                   onClick={() => jdInputRef.current?.click()}
-                  className="border border-white/20 rounded p-4 text-center cursor-pointer hover:border-white/40 transition-colors bg-white/5"
+                  className="border border-white/20 rounded p-3 md:p-4 text-center cursor-pointer hover:border-white/40 transition-colors bg-white/5 min-h-16 flex flex-col items-center justify-center"
                 >
-                  <p className="text-sm text-white/70">
+                  <p className="text-xs md:text-sm text-white/70">
                     + attach jd <span className="text-white/40">no file</span>
                   </p>
                   {formData.jdFile && (
-                    <p className="mt-2 text-white text-xs font-semibold">{formData.jdFile.name}</p>
+                    <p className="mt-1 md:mt-2 text-white text-xs font-semibold truncate w-full px-1">{formData.jdFile.name}</p>
                   )}
                   <input
                     ref={jdInputRef}
@@ -189,13 +189,13 @@ The Hiring Team`,
                 </label>
                 <div
                   onClick={() => assessmentInputRef.current?.click()}
-                  className="border border-white/20 rounded p-4 text-center cursor-pointer hover:border-white/40 transition-colors bg-white/5"
+                  className="border border-white/20 rounded p-3 md:p-4 text-center cursor-pointer hover:border-white/40 transition-colors bg-white/5 min-h-16 flex flex-col items-center justify-center"
                 >
-                  <p className="text-sm text-white/70">
+                  <p className="text-xs md:text-sm text-white/70">
                     + attach assessment <span className="text-white/40">no file</span>
                   </p>
                   {formData.assessmentFile && (
-                    <p className="mt-2 text-white text-xs font-semibold">{formData.assessmentFile.name}</p>
+                    <p className="mt-1 md:mt-2 text-white text-xs font-semibold truncate w-full px-1">{formData.assessmentFile.name}</p>
                   )}
                   <input
                     ref={assessmentInputRef}
