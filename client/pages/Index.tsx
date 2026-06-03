@@ -91,17 +91,17 @@ The Hiring Team`,
   };
 
   return (
-    <div className="min-h-screen bg-slate-900 py-8 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-500 via-blue-600 to-blue-900 py-8 px-4">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="text-xs text-lime-400 font-mono mb-2">
+          <div className="text-xs text-white font-mono mb-2 opacity-90">
             v0.1 • python • repos • 100% local
           </div>
           <h1 className="text-4xl font-bold text-white mb-1">
-            Resume <span className="text-lime-400">Email</span> Agent
+            Resume <span className="text-white">Email</span> Agent
           </h1>
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-white opacity-90">
             python + repos + email - fully independent
           </p>
         </div>
@@ -109,9 +109,9 @@ The Hiring Team`,
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* 1. Upload Resume */}
-          <div className="border border-gray-700 rounded-lg p-6 bg-slate-800/50">
+          <div className="border border-white/20 rounded-lg p-6 bg-white/10 backdrop-blur-sm">
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-6 h-6 rounded-full border border-gray-600 flex items-center justify-center text-xs text-gray-400">
+              <span className="w-6 h-6 rounded-full border border-white/30 flex items-center justify-center text-xs text-white">
                 1
               </span>
               <h2 className="text-lg font-semibold text-white uppercase tracking-wide text-sm">
@@ -123,15 +123,15 @@ The Hiring Team`,
               onDragOver={handleDragOver}
               onDrop={(e) => handleDrop(e, "resume")}
               onClick={() => resumeInputRef.current?.click()}
-              className="border-2 border-dashed border-gray-700 rounded-lg p-8 text-center cursor-pointer hover:border-gray-600 transition-colors bg-slate-900/50"
+              className="border-2 border-dashed border-white/20 rounded-lg p-8 text-center cursor-pointer hover:border-white/40 transition-colors bg-white/5"
             >
-              <FileIcon className="w-8 h-8 text-gray-500 mx-auto mb-3" />
-              <p className="text-gray-400 mb-1">
+              <FileIcon className="w-8 h-8 text-white/50 mx-auto mb-3" />
+              <p className="text-white/80 mb-1">
                 Drop PDF or DOCX here
               </p>
-              <p className="text-xs text-gray-600">click to browse - pdf, docx supported</p>
+              <p className="text-xs text-white/60">click to browse - pdf, docx supported</p>
               {formData.resume && (
-                <p className="mt-3 text-lime-400 text-sm">{formData.resume.name}</p>
+                <p className="mt-3 text-white text-sm font-semibold">{formData.resume.name}</p>
               )}
               <input
                 ref={resumeInputRef}
@@ -144,9 +144,9 @@ The Hiring Team`,
           </div>
 
           {/* 2. Attachments */}
-          <div className="border border-gray-700 rounded-lg p-6 bg-slate-800/50">
+          <div className="border border-white/20 rounded-lg p-6 bg-white/10 backdrop-blur-sm">
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-6 h-6 rounded-full border border-gray-600 flex items-center justify-center text-xs text-gray-400">
+              <span className="w-6 h-6 rounded-full border border-white/30 flex items-center justify-center text-xs text-white">
                 2
               </span>
               <h2 className="text-lg font-semibold text-white uppercase tracking-wide text-sm">
@@ -157,18 +157,18 @@ The Hiring Team`,
             <div className="grid grid-cols-2 gap-4">
               {/* JD File */}
               <div className="space-y-2">
-                <label className="text-xs text-gray-400 uppercase tracking-wide">
+                <label className="text-xs text-white/70 uppercase tracking-wide">
                   JD Description
                 </label>
                 <div
                   onClick={() => jdInputRef.current?.click()}
-                  className="border border-gray-700 rounded p-4 text-center cursor-pointer hover:border-gray-600 transition-colors bg-slate-900/50"
+                  className="border border-white/20 rounded p-4 text-center cursor-pointer hover:border-white/40 transition-colors bg-white/5"
                 >
-                  <p className="text-sm text-gray-400">
-                    + attach jd <span className="text-gray-600">no file</span>
+                  <p className="text-sm text-white/70">
+                    + attach jd <span className="text-white/40">no file</span>
                   </p>
                   {formData.jdFile && (
-                    <p className="mt-2 text-lime-400 text-xs">{formData.jdFile.name}</p>
+                    <p className="mt-2 text-white text-xs font-semibold">{formData.jdFile.name}</p>
                   )}
                   <input
                     ref={jdInputRef}
@@ -182,18 +182,18 @@ The Hiring Team`,
 
               {/* Assessment File */}
               <div className="space-y-2">
-                <label className="text-xs text-gray-400 uppercase tracking-wide">
+                <label className="text-xs text-white/70 uppercase tracking-wide">
                   Assessment File
                 </label>
                 <div
                   onClick={() => assessmentInputRef.current?.click()}
-                  className="border border-gray-700 rounded p-4 text-center cursor-pointer hover:border-gray-600 transition-colors bg-slate-900/50"
+                  className="border border-white/20 rounded p-4 text-center cursor-pointer hover:border-white/40 transition-colors bg-white/5"
                 >
-                  <p className="text-sm text-gray-400">
-                    + attach assessment <span className="text-gray-600">no file</span>
+                  <p className="text-sm text-white/70">
+                    + attach assessment <span className="text-white/40">no file</span>
                   </p>
                   {formData.assessmentFile && (
-                    <p className="mt-2 text-lime-400 text-xs">{formData.assessmentFile.name}</p>
+                    <p className="mt-2 text-white text-xs font-semibold">{formData.assessmentFile.name}</p>
                   )}
                   <input
                     ref={assessmentInputRef}
@@ -208,9 +208,9 @@ The Hiring Team`,
           </div>
 
           {/* 3. Email Content */}
-          <div className="border border-gray-700 rounded-lg p-6 bg-slate-800/50">
+          <div className="border border-white/20 rounded-lg p-6 bg-white/10 backdrop-blur-sm">
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-6 h-6 rounded-full border border-gray-600 flex items-center justify-center text-xs text-gray-400">
+              <span className="w-6 h-6 rounded-full border border-white/30 flex items-center justify-center text-xs text-white">
                 3
               </span>
               <h2 className="text-lg font-semibold text-white uppercase tracking-wide text-sm">
@@ -221,7 +221,7 @@ The Hiring Team`,
             <div className="space-y-4">
               {/* Subject Line */}
               <div>
-                <label className="text-xs text-gray-400 uppercase tracking-wide block mb-2">
+                <label className="text-xs text-white/70 uppercase tracking-wide block mb-2">
                   Subject Line
                 </label>
                 <input
@@ -229,13 +229,13 @@ The Hiring Team`,
                   name="subject"
                   value={formData.subject}
                   onChange={handleInputChange}
-                  className="w-full bg-slate-900 border border-gray-700 rounded px-4 py-2 text-white placeholder-gray-600 focus:outline-none focus:border-gray-600"
+                  className="w-full bg-white/10 border border-white/20 rounded px-4 py-2 text-white placeholder-white/40 focus:outline-none focus:border-white/40"
                 />
               </div>
 
               {/* Email Body */}
               <div>
-                <label className="text-xs text-gray-400 uppercase tracking-wide block mb-2">
+                <label className="text-xs text-white/70 uppercase tracking-wide block mb-2">
                   Email Body
                 </label>
                 <textarea
@@ -243,16 +243,16 @@ The Hiring Team`,
                   value={formData.emailBody}
                   onChange={handleInputChange}
                   rows={8}
-                  className="w-full bg-slate-900 border border-lime-500 rounded px-4 py-2 text-white placeholder-gray-600 focus:outline-none focus:border-lime-400 resize-none"
+                  className="w-full bg-white/10 border border-white/30 rounded px-4 py-2 text-white placeholder-white/40 focus:outline-none focus:border-white/50 resize-none"
                 />
               </div>
             </div>
           </div>
 
           {/* 4. Gmail SMTP Config */}
-          <div className="border border-gray-700 rounded-lg p-6 bg-slate-800/50">
+          <div className="border border-white/20 rounded-lg p-6 bg-white/10 backdrop-blur-sm">
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-6 h-6 rounded-full border border-gray-600 flex items-center justify-center text-xs text-gray-400">
+              <span className="w-6 h-6 rounded-full border border-white/30 flex items-center justify-center text-xs text-white">
                 4
               </span>
               <h2 className="text-lg font-semibold text-white uppercase tracking-wide text-sm">
@@ -263,7 +263,7 @@ The Hiring Team`,
             <div className="grid grid-cols-2 gap-4">
               {/* SMTP Host */}
               <div>
-                <label className="text-xs text-gray-400 uppercase tracking-wide block mb-2">
+                <label className="text-xs text-white/70 uppercase tracking-wide block mb-2">
                   SMTP Host
                 </label>
                 <input
@@ -271,13 +271,13 @@ The Hiring Team`,
                   name="smtpHost"
                   value={formData.smtpHost}
                   onChange={handleInputChange}
-                  className="w-full bg-slate-900 border border-gray-700 rounded px-4 py-2 text-white placeholder-gray-600 focus:outline-none focus:border-gray-600"
+                  className="w-full bg-white/10 border border-white/20 rounded px-4 py-2 text-white placeholder-white/40 focus:outline-none focus:border-white/40"
                 />
               </div>
 
               {/* SMTP Port */}
               <div>
-                <label className="text-xs text-gray-400 uppercase tracking-wide block mb-2">
+                <label className="text-xs text-white/70 uppercase tracking-wide block mb-2">
                   SMTP Port
                 </label>
                 <input
@@ -285,13 +285,13 @@ The Hiring Team`,
                   name="smtpPort"
                   value={formData.smtpPort}
                   onChange={handleInputChange}
-                  className="w-full bg-slate-900 border border-gray-700 rounded px-4 py-2 text-white placeholder-gray-600 focus:outline-none focus:border-gray-600"
+                  className="w-full bg-white/10 border border-white/20 rounded px-4 py-2 text-white placeholder-white/40 focus:outline-none focus:border-white/40"
                 />
               </div>
 
               {/* SMTP User */}
               <div>
-                <label className="text-xs text-gray-400 uppercase tracking-wide block mb-2">
+                <label className="text-xs text-white/70 uppercase tracking-wide block mb-2">
                   Your Email Address
                 </label>
                 <input
@@ -299,13 +299,13 @@ The Hiring Team`,
                   name="smtpUser"
                   value={formData.smtpUser}
                   onChange={handleInputChange}
-                  className="w-full bg-slate-900 border border-gray-700 rounded px-4 py-2 text-white placeholder-gray-600 focus:outline-none focus:border-gray-600"
+                  className="w-full bg-white/10 border border-white/20 rounded px-4 py-2 text-white placeholder-white/40 focus:outline-none focus:border-white/40"
                 />
               </div>
 
               {/* SMTP Password */}
               <div>
-                <label className="text-xs text-gray-400 uppercase tracking-wide block mb-2">
+                <label className="text-xs text-white/70 uppercase tracking-wide block mb-2">
                   App Password
                 </label>
                 <div className="relative">
@@ -314,15 +314,15 @@ The Hiring Team`,
                     name="smtpPassword"
                     value={formData.smtpPassword}
                     onChange={handleInputChange}
-                    className="w-full bg-slate-900 border border-gray-700 rounded px-4 py-2 text-white placeholder-gray-600 focus:outline-none focus:border-gray-600"
+                    className="w-full bg-white/10 border border-white/20 rounded px-4 py-2 text-white placeholder-white/40 focus:outline-none focus:border-white/40"
                   />
                   <button
                     type="button"
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-400"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-white/40 hover:text-white/70"
                   >
                     <Eye className="w-4 h-4" />
                   </button>
-                  <a href="#" className="text-xs text-lime-400 hover:text-lime-300 mt-1 inline-block">
+                  <a href="#" className="text-xs text-white/70 hover:text-white mt-1 inline-block">
                     Generate App Password
                   </a>
                 </div>
@@ -330,7 +330,7 @@ The Hiring Team`,
 
               {/* To Email */}
               <div className="col-span-2">
-                <label className="text-xs text-gray-400 uppercase tracking-wide block mb-2">
+                <label className="text-xs text-white/70 uppercase tracking-wide block mb-2">
                   Their Email Address
                 </label>
                 <input
@@ -338,7 +338,7 @@ The Hiring Team`,
                   name="toEmail"
                   value={formData.toEmail}
                   onChange={handleInputChange}
-                  className="w-full bg-slate-900 border border-gray-700 rounded px-4 py-2 text-white placeholder-gray-600 focus:outline-none focus:border-gray-600"
+                  className="w-full bg-white/10 border border-white/20 rounded px-4 py-2 text-white placeholder-white/40 focus:outline-none focus:border-white/40"
                 />
               </div>
             </div>
@@ -346,7 +346,7 @@ The Hiring Team`,
 
           {/* 5. Send Button */}
           <div className="flex items-center gap-2 px-6 py-4">
-            <span className="w-6 h-6 rounded-full border border-gray-600 flex items-center justify-center text-xs text-gray-400">
+            <span className="w-6 h-6 rounded-full border border-white/30 flex items-center justify-center text-xs text-white">
               5
             </span>
             <h2 className="text-lg font-semibold text-white uppercase tracking-wide text-sm">
@@ -356,14 +356,14 @@ The Hiring Team`,
 
           <button
             type="submit"
-            className="w-full bg-lime-500 hover:bg-lime-600 text-slate-900 font-semibold py-3 rounded-lg transition-colors uppercase tracking-wide"
+            className="w-full bg-white hover:bg-gray-100 text-blue-600 font-semibold py-3 rounded-lg transition-colors uppercase tracking-wide"
           >
             • Extract Email & Send
           </button>
         </form>
 
         {/* Footer */}
-        <div className="mt-12 text-center text-xs text-gray-600">
+        <div className="mt-12 text-center text-xs text-white/50">
           <p>made with ❤️ by Zeno Cyber</p>
         </div>
       </div>
