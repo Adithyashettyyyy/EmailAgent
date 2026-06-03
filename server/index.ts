@@ -2,6 +2,10 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { handleDemo } from "./routes/demo";
+import { handleProcessResume } from "./routes/process-resume";
+import multer from "multer";
+
+const upload = multer({ storage: multer.memoryStorage() });
 
 export function createServer() {
   const app = express();
@@ -18,6 +22,8 @@ export function createServer() {
   });
 
   app.get("/api/demo", handleDemo);
+
+  app.post("/api/process-resume", upload.single("resume"), handleProcessResume);
 
   return app;
 }

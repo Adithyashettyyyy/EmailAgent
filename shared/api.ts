@@ -10,3 +10,11 @@
 export interface DemoResponse {
   message: string;
 }
+
+/**
+ * Response type for /api/process-resume
+ */
+export interface ProcessResumeResponse {
+  email: string;
+  fileName: string;
+}
