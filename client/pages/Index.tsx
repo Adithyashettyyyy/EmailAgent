@@ -97,28 +97,20 @@ The Hiring Team`,
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <div className="flex items-center gap-2">
-              <div className="flex items-center justify-center w-8 h-8 bg-blue-800 rounded-full">
-                <MapPin className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-white font-bold text-lg">Resume<span className="text-blue-200">Email</span></span>
-            </div>
-
-            {/* Nav Links */}
-            <div className="hidden md:flex items-center gap-8">
-              <a href="#" className="text-white text-sm hover:text-blue-100">Industries</a>
-              <a href="#" className="text-white text-sm hover:text-blue-100">Solutions</a>
-              <a href="#" className="text-white text-sm hover:text-blue-100">About Us</a>
-              <a href="#" className="text-white text-sm hover:text-blue-100">Events</a>
-              <a href="#" className="text-white text-sm hover:text-blue-100">Resources</a>
+            <div className="flex items-center gap-3">
+              <svg viewBox="0 0 200 200" className="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="35" fill="none" stroke="#1e40af" strokeWidth="8"/>
+                <polygon points="50,20 80,80 20,80" fill="#1e40af"/>
+              </svg>
+              <span className="text-white font-bold text-lg">Talent<span className="text-blue-200">Pipeline</span></span>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex items-center gap-3">
-              <button className="hidden sm:block text-white text-sm hover:text-blue-100 px-3 py-2">
+              <button className="text-white text-sm hover:text-blue-100 px-4 py-2 transition-colors">
                 Send Resume
               </button>
-              <button className="bg-blue-900 hover:bg-blue-950 text-white px-4 py-2 rounded text-sm font-medium">
+              <button className="bg-blue-900 hover:bg-blue-950 text-white px-4 py-2 rounded text-sm font-medium transition-colors">
                 Schedule Interview
               </button>
             </div>
@@ -132,7 +124,7 @@ The Hiring Team`,
         {/* Hero Title */}
         <div className="text-center mb-6 md:mb-8 pt-8">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
-            Resume <span className="text-white">Email</span> Agent
+            Talent <span className="text-white">Pipeline</span>
           </h1>
         </div>
 
