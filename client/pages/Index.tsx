@@ -109,7 +109,7 @@ The Hiring Team`,
             <div className="flex items-center gap-3">
               <button className="text-white text-sm px-4 py-2 transition-colors group relative">
                 <span className="group-hover:hidden">Send Resume</span>
-                <span className="hidden group-hover:inline text-blue-100">Talent Pipeline</span>
+                <span className="hidden group-hover:inline text-blue-100">Resume Email Agent</span>
               </button>
               <button className="bg-blue-900 hover:bg-blue-950 text-white px-4 py-2 rounded text-sm font-medium transition-colors">
                 Schedule Interview
@@ -125,7 +125,7 @@ The Hiring Team`,
         {/* Hero Title */}
         <div className="text-center mb-6 md:mb-8 pt-8">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
-            Talent <span className="text-blue-200">Pipeline</span>
+            Resume <span className="text-blue-200">Email</span> Agent
           </h1>
         </div>
 
