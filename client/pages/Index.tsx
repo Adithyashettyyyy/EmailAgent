@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { Upload, File as FileIcon, Eye, ChevronDown } from "lucide-react";
+import { Upload, File as FileIcon, Eye, ChevronDown, MapPin } from "lucide-react";
 
 interface FormData {
   resume: File | null;
@@ -92,20 +92,48 @@ The Hiring Team`,
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-500 via-blue-600 to-blue-900 relative overflow-hidden">
-      <div className="absolute bottom-0 left-0 right-0 h-48 md:h-64 bg-white transform -skew-y-2"></div>
-      <div className="relative py-6 md:py-8 px-4 md:px-6 z-10">
-      <div className="max-w-2xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-6 md:mb-8">
-          <div className="text-xs text-white font-mono mb-2 opacity-90">
-            v0.1 • python • repos • 100% local
+      {/* Header Navigation */}
+      <div className="bg-blue-600 border-b border-blue-700 sticky top-0 z-20">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <div className="flex items-center justify-between h-16">
+            {/* Logo */}
+            <div className="flex items-center gap-2">
+              <div className="flex items-center justify-center w-8 h-8 bg-blue-800 rounded-full">
+                <MapPin className="w-5 h-5 text-white" />
+              </div>
+              <span className="text-white font-bold text-lg">Resume<span className="text-blue-200">Email</span></span>
+            </div>
+
+            {/* Nav Links */}
+            <div className="hidden md:flex items-center gap-8">
+              <a href="#" className="text-white text-sm hover:text-blue-100">Industries</a>
+              <a href="#" className="text-white text-sm hover:text-blue-100">Solutions</a>
+              <a href="#" className="text-white text-sm hover:text-blue-100">About Us</a>
+              <a href="#" className="text-white text-sm hover:text-blue-100">Events</a>
+              <a href="#" className="text-white text-sm hover:text-blue-100">Resources</a>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex items-center gap-3">
+              <button className="hidden sm:block text-white text-sm hover:text-blue-100 px-3 py-2">
+                Send Resume
+              </button>
+              <button className="bg-blue-900 hover:bg-blue-950 text-white px-4 py-2 rounded text-sm font-medium">
+                Schedule Interview
+              </button>
+            </div>
           </div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-1">
+        </div>
+      </div>
+
+      <div className="absolute bottom-0 left-0 right-0 h-48 md:h-64 bg-white transform -skew-y-2"></div>
+      <div className="relative py-12 md:py-16 px-4 md:px-6 z-10">
+      <div className="max-w-2xl mx-auto">
+        {/* Hero Title */}
+        <div className="text-center mb-6 md:mb-8 pt-8">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
             Resume <span className="text-white">Email</span> Agent
           </h1>
-          <p className="text-xs md:text-sm text-white opacity-90">
-            python + repos + email - fully independent
-          </p>
         </div>
 
         {/* Form */}
@@ -364,10 +392,6 @@ The Hiring Team`,
           </button>
         </form>
 
-        {/* Footer */}
-        <div className="mt-12 text-center text-xs text-white/50">
-          <p>made with ❤️ by Zeno Cyber</p>
-        </div>
       </div>
       </div>
     </div>
