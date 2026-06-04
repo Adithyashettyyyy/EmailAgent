@@ -91,59 +91,48 @@ The Hiring Team`,
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-500 via-blue-600 to-blue-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-gray-950 via-purple-950 to-gray-900 relative overflow-hidden">
       {/* Header Navigation */}
-      <div className="bg-blue-600 sticky top-0 z-20">
+      <div className="bg-gray-950/80 backdrop-blur-sm border-b border-purple-500/30 sticky top-0 z-20">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center gap-2">
-              <svg viewBox="0 0 200 100" className="h-10" xmlns="http://www.w3.org/2000/svg">
-                {/* Circle */}
-                <circle cx="30" cy="35" r="20" fill="none" stroke="#1e3a8a" strokeWidth="5"/>
-                {/* Pin/Pointer */}
-                <polygon points="30,10 45,50 15,50" fill="#1e40af"/>
-                {/* Text */}
-                <text x="60" y="45" fontSize="28" fontWeight="bold" fill="#fff">Price</text>
-                <text x="120" y="45" fontSize="28" fontWeight="bold" fill="#1e40af">Easy</text>
-                <text x="170" y="30" fontSize="8" fontWeight="bold" fill="#1e40af">™</text>
-              </svg>
+              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Resume Agent</span>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex items-center gap-4">
-              <button className="text-white text-sm px-4 py-2 transition-colors hover:text-blue-100">
+              <button className="text-cyan-400 text-sm px-4 py-2 transition-colors hover:text-pink-400 border border-cyan-400/30 hover:border-pink-400/30 rounded">
                 Email Agent
               </button>
-              <button className="bg-blue-900 hover:bg-blue-950 text-white px-4 py-2 rounded text-sm font-medium transition-colors">
+              <button className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white px-4 py-2 rounded text-sm font-medium transition-colors">
                 Schedule Interview
               </button>
             </div>
           </div>
         </div>
-        {/* White underline */}
-        <div className="h-3 bg-white transform -skew-x-12"></div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-48 md:h-64 bg-white transform -skew-y-2"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-48 md:h-64 bg-gradient-to-t from-cyan-400/20 to-transparent transform -skew-y-2"></div>
       <div className="relative py-12 md:py-16 px-4 md:px-6 z-10">
       <div className="max-w-2xl mx-auto">
         {/* Hero Title */}
         <div className="text-center mb-6 md:mb-8 pt-8">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
-            Resume <span className="text-blue-200">Email</span> Agent
+            Resume <span className="bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">Email</span> Agent
           </h1>
         </div>
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
           {/* 1. Upload Resume */}
-          <div className="border border-white/20 rounded-lg p-4 md:p-6 bg-white/10 backdrop-blur-sm">
+          <div className="border border-cyan-500/30 rounded-lg p-4 md:p-6 bg-gray-900/50 backdrop-blur-sm hover:border-cyan-500/60 transition-colors">
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-6 h-6 rounded-full border border-white/30 flex items-center justify-center text-xs text-white flex-shrink-0">
+              <span className="w-6 h-6 rounded-full border border-cyan-400 flex items-center justify-center text-xs bg-cyan-400/10 text-cyan-400 flex-shrink-0">
                 1
               </span>
-              <h2 className="text-base md:text-lg font-semibold text-white uppercase tracking-wide">
+              <h2 className="text-base md:text-lg font-semibold text-cyan-400 uppercase tracking-wide">
                 Upload Resume
               </h2>
             </div>
@@ -152,15 +141,15 @@ The Hiring Team`,
               onDragOver={handleDragOver}
               onDrop={(e) => handleDrop(e, "resume")}
               onClick={() => resumeInputRef.current?.click()}
-              className="border-2 border-dashed border-white/20 rounded-lg p-6 md:p-8 text-center cursor-pointer hover:border-white/40 transition-colors bg-white/5"
+              className="border-2 border-dashed border-cyan-500/30 rounded-lg p-6 md:p-8 text-center cursor-pointer hover:border-cyan-500/60 transition-colors bg-cyan-500/5"
             >
-              <FileIcon className="w-6 md:w-8 h-6 md:h-8 text-white/50 mx-auto mb-2 md:mb-3" />
-              <p className="text-white/80 mb-1 text-sm md:text-base">
+              <FileIcon className="w-6 md:w-8 h-6 md:h-8 text-cyan-400/70 mx-auto mb-2 md:mb-3" />
+              <p className="text-cyan-300 mb-1 text-sm md:text-base">
                 Drop PDF or DOCX here
               </p>
-              <p className="text-xs text-white/60">click to browse - pdf, docx supported</p>
+              <p className="text-xs text-cyan-400/60">click to browse - pdf, docx supported</p>
               {formData.resume && (
-                <p className="mt-2 md:mt-3 text-white text-xs md:text-sm font-semibold truncate">{formData.resume.name}</p>
+                <p className="mt-2 md:mt-3 text-cyan-400 text-xs md:text-sm font-semibold truncate">{formData.resume.name}</p>
               )}
               <input
                 ref={resumeInputRef}
