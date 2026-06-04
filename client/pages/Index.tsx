@@ -93,23 +93,27 @@ The Hiring Team`,
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-500 via-blue-600 to-blue-900 relative overflow-hidden">
       {/* Header Navigation */}
-      <div className="bg-blue-600 border-b border-blue-700 sticky top-0 z-20">
+      <div className="bg-blue-600 sticky top-0 z-20">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center gap-2">
-              <svg viewBox="0 0 100 100" className="w-7 h-7" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="35" cy="30" r="18" fill="none" stroke="white" strokeWidth="4"/>
-                <polygon points="35,12 50,45 20,45" fill="white"/>
+              <svg viewBox="0 0 200 100" className="h-10" xmlns="http://www.w3.org/2000/svg">
+                {/* Circle */}
+                <circle cx="30" cy="35" r="20" fill="none" stroke="#1e3a8a" strokeWidth="5"/>
+                {/* Pin/Pointer */}
+                <polygon points="30,10 45,50 15,50" fill="#1e40af"/>
+                {/* Text */}
+                <text x="60" y="45" fontSize="28" fontWeight="bold" fill="#fff">Price</text>
+                <text x="120" y="45" fontSize="28" fontWeight="bold" fill="#1e40af">Easy</text>
+                <text x="170" y="30" fontSize="8" fontWeight="bold" fill="#1e40af">™</text>
               </svg>
-              <span className="text-white font-bold text-base md:text-lg">Price<span className="text-blue-200">Easy</span></span>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex items-center gap-3">
-              <button className="text-white text-sm px-4 py-2 transition-colors group relative">
-                <span className="group-hover:hidden">Send Resume</span>
-                <span className="hidden group-hover:inline text-blue-100">Resume Email Agent</span>
+            <div className="flex items-center gap-4">
+              <button className="text-white text-sm px-4 py-2 transition-colors hover:text-blue-100">
+                Email Agent
               </button>
               <button className="bg-blue-900 hover:bg-blue-950 text-white px-4 py-2 rounded text-sm font-medium transition-colors">
                 Schedule Interview
@@ -117,6 +121,8 @@ The Hiring Team`,
             </div>
           </div>
         </div>
+        {/* White underline */}
+        <div className="h-3 bg-white transform -skew-x-12"></div>
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 h-48 md:h-64 bg-white transform -skew-y-2"></div>
