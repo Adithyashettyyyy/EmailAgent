@@ -97,18 +97,19 @@ The Hiring Team`,
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <div className="flex items-center gap-3">
-              <svg viewBox="0 0 200 200" className="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="35" fill="none" stroke="#1e40af" strokeWidth="8"/>
-                <polygon points="50,20 80,80 20,80" fill="#1e40af"/>
+            <div className="flex items-center gap-2">
+              <svg viewBox="0 0 100 100" className="w-7 h-7" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="35" cy="30" r="18" fill="none" stroke="white" strokeWidth="4"/>
+                <polygon points="35,12 50,45 20,45" fill="white"/>
               </svg>
-              <span className="text-white font-bold text-lg">Talent<span className="text-blue-200">Pipeline</span></span>
+              <span className="text-white font-bold text-base md:text-lg">Price<span className="text-blue-200">Easy</span></span>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex items-center gap-3">
-              <button className="text-white text-sm hover:text-blue-100 px-4 py-2 transition-colors">
-                Send Resume
+              <button className="text-white text-sm px-4 py-2 transition-colors group relative">
+                <span className="group-hover:hidden">Send Resume</span>
+                <span className="hidden group-hover:inline text-blue-100">Talent Pipeline</span>
               </button>
               <button className="bg-blue-900 hover:bg-blue-950 text-white px-4 py-2 rounded text-sm font-medium transition-colors">
                 Schedule Interview
@@ -124,7 +125,7 @@ The Hiring Team`,
         {/* Hero Title */}
         <div className="text-center mb-6 md:mb-8 pt-8">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
-            Talent <span className="text-white">Pipeline</span>
+            Talent <span className="text-blue-200">Pipeline</span>
           </h1>
         </div>
 
