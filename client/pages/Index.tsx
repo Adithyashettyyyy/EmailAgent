@@ -161,10 +161,12 @@ The Hiring Team`,
             </div>
           </div>
 
-          {/* Success Message Box */}
-          <div className="border border-green-500/30 rounded-lg p-4 md:p-6 bg-green-500/10 backdrop-blur-sm">
-            <p className="text-green-400 text-sm">✓ Email extracted successfully from resume</p>
-          </div>
+          {/* Success Message Box - Only show after resume upload */}
+          {formData.resume && (
+            <div className="border border-green-500/30 rounded-lg p-4 md:p-6 bg-green-500/10 backdrop-blur-sm">
+              <p className="text-green-400 text-sm">✓ Email extracted successfully from resume</p>
+            </div>
+          )}
 
           {/* 2. Attachments */}
           <div className="border border-cyan-500/30 rounded-lg p-4 md:p-6 bg-gray-900/50 backdrop-blur-sm hover:border-cyan-500/60 transition-colors">
