@@ -161,12 +161,17 @@ The Hiring Team`,
             </div>
           </div>
 
-          {/* Success Message Box - Only show after resume upload */}
-          {formData.resume && (
-            <div className="border border-green-500/30 rounded-lg p-4 md:p-6 bg-green-500/10 backdrop-blur-sm">
-              <p className="text-green-400 text-sm">✓ Email extracted successfully from resume</p>
-            </div>
-          )}
+          {/* Email Status Box */}
+          <div className="border border-green-500/30 rounded-lg p-4 md:p-6 bg-green-500/10 backdrop-blur-sm">
+            {formData.resume ? (
+              <>
+                <p className="text-green-400 text-sm">✓ Email extracted successfully from resume</p>
+                <p className="text-green-300 text-xs mt-2 font-mono break-all">📧 {formData.smtpUser || "Waiting to extract email..."}</p>
+              </>
+            ) : (
+              <p className="text-green-400/70 text-sm">⏳ Upload resume to extract email</p>
+            )}
+          </div>
 
           {/* 2. Attachments */}
           <div className="border border-cyan-500/30 rounded-lg p-4 md:p-6 bg-gray-900/50 backdrop-blur-sm hover:border-cyan-500/60 transition-colors">
@@ -354,8 +359,8 @@ The Hiring Team`,
                   >
                     <Eye className="w-4 h-4" />
                   </button>
-                  <a href="#" className="text-xs text-cyan-400/70 hover:text-cyan-400 mt-1 inline-block">
-                    Generate App Password
+                  <a href="https://myaccount.google.com/apppasswords" target="_blank" rel="noopener noreferrer" className="text-xs text-cyan-400/70 hover:text-cyan-400 mt-1 inline-block">
+                    Generate App Password →
                   </a>
                 </div>
               </div>
