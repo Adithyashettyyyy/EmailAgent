@@ -163,7 +163,7 @@ The Hiring Team`,
 
           {/* Success Message Box */}
           <div className="border border-green-500/30 rounded-lg p-4 md:p-6 bg-green-500/10 backdrop-blur-sm">
-            <p className="text-green-400 text-sm">✓ Email sent successfully</p>
+            <p className="text-green-400 text-sm">✓ Email extracted successfully from resume</p>
           </div>
 
           {/* 2. Attachments */}
@@ -388,7 +388,7 @@ The Hiring Team`,
             type="submit"
             className="w-full bg-gradient-to-r from-cyan-500 to-pink-500 hover:from-cyan-600 hover:to-pink-600 text-white font-semibold py-3 rounded-lg transition-colors text-sm md:text-base"
           >
-            • Extract Email & Send
+            • Send Mail
           </button>
         </form>
 
