@@ -41,7 +41,7 @@ The Hiring Team`,
   const jdInputRef = useRef<HTMLInputElement>(null);
   const assessmentInputRef = useRef<HTMLInputElement>(null);
 
-  const handleFileInput = (
+  const handleFileInput = async (
     e: React.ChangeEvent<HTMLInputElement>,
     type: "resume" | "jdFile" | "assessmentFile"
   ) => {
@@ -51,6 +51,30 @@ The Hiring Team`,
         ...prev,
         [type]: file,
       }));
+
+      // If it's a resume, extract the email
+      if (type === "resume") {
+        try {
+          const formDataUpload = new FormData();
+          formDataUpload.append("resume", file);
+
+          const response = await fetch("/api/process-resume", {
+            method: "POST",
+            body: formDataUpload,
+          });
+
+          if (response.ok) {
+            const data = await response.json();
+            // Update the smtpUser with extracted email
+            setFormData((prev) => ({
+              ...prev,
+              smtpUser: data.email,
+            }));
+          }
+        } catch (error) {
+          console.error("Error extracting email:", error);
+        }
+      }
     }
   };
 
@@ -163,10 +187,10 @@ The Hiring Team`,
 
           {/* Email Status Box */}
           <div className="border border-green-500/30 rounded-lg p-4 md:p-6 bg-green-500/10 backdrop-blur-sm">
-            {formData.resume ? (
+            {formData.resume && formData.smtpUser !== "your@gmail.com" ? (
               <>
                 <p className="text-green-400 text-sm">✓ Email extracted successfully from resume</p>
-                <p className="text-green-300 text-xs mt-2 font-mono break-all">📧 {formData.smtpUser || "Waiting to extract email..."}</p>
+                <p className="text-green-300 text-xs mt-2 font-mono break-all">📧 {formData.smtpUser}</p>
               </>
             ) : (
               <p className="text-green-400/70 text-sm">⏳ Upload resume to extract email</p>
