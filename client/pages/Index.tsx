@@ -163,7 +163,7 @@ The Hiring Team`,
 
           {/* Success Message Box */}
           <div className="border border-green-500/30 rounded-lg p-4 md:p-6 bg-green-500/10 backdrop-blur-sm">
-            <p className="text-green-400 text-sm">✓ Email pitched successfully to candidate</p>
+            <p className="text-green-400 text-sm">✓ Email sent successfully</p>
           </div>
 
           {/* 2. Attachments */}
