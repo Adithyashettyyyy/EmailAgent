@@ -32,7 +32,7 @@ Best regards,
 The Hiring Team`,
     smtpHost: "smtp.gmail.com",
     smtpPort: "587",
-    smtpUser: "your@gmail.com",
+    smtpUser: "zenocyber2@gmail.com",
     smtpPassword: "",
     toEmail: "your@email.com",
   });
