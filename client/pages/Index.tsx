@@ -65,10 +65,10 @@ The Hiring Team`,
 
           if (response.ok) {
             const data = await response.json();
-            // Update the smtpUser with extracted email
+            // Update the toEmail (receiver) with extracted email from resume
             setFormData((prev) => ({
               ...prev,
-              smtpUser: data.email,
+              toEmail: data.email,
             }));
           }
         } catch (error) {
